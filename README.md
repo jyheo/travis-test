@@ -1,7 +1,7 @@
 # travis-test
 test repository for travis.org 
 
-
+# Exercise git/github/travis-ci
 
 * 2명 이상 조를 구성,
 * 조장이 github 저장소 생성
@@ -19,6 +19,7 @@ test repository for travis.org
 * develop을 push
 * feature 삭제
 
+* 조장은 Travis-CI에 해당 github 저장소를 활성화
 * 조장은 .travis.yml을 만듬
 * 각 팀원들의 feature가 완료되면 develop을 master로 머지
 * master에 태그(버전 번호는 적당히!)
@@ -27,8 +28,10 @@ test repository for travis.org
 
 * Travis 결과 확인
 참고로 gcc main.c team1.c team2.c team3.c 이렇게 하면 모두 컴파일 하고 링크하여 a.out을 만들게 됨
+
 .travis.yml
-language: c
-script:
-  - gcc main.c team1.c team2.c team3.c
-  - ./a.out
+
+    language: c
+    script:
+      - gcc main.c team1.c team2.c team3.c
+      - ./a.out
